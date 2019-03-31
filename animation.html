@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"> </script>
+<style>
+#box{
+  position:absolute;
+  top:50px;
+  left:10px;
+  width:200px;
+  height:200px;
+  background-color:blue;
+}
+
+
+</style>
+
+  </head>
+  <body>
+
+
+
+  <button id="animate">Animate</button>
+  <button id="ani2">Reset animate</button>
+  <button id="down">down animate</button>
+  <button id="right">right animate</button>
+  <button id="up">up animate</button>
+<div id="box">
+
+</div>
+
+<script type="text/javascript">
+
+
+var box =$("#box");
+
+
+
+ $(document).ready(function(){
+ $("#animate").click(function(){
+   box.animate({
+     "left":"+=1250px"
+   },
+     "slow",
+
+     )
+ });
+$("#ani2").click(function(){
+box.animate({
+  top:'50px',
+  left:'10px',
+  width:'200px',
+  height:'200px'
+})
+});
+$("#down").click(function(){
+  box.animate({
+    top:'560px'
+  },"slow")
+});
+$('#right').click(function(){
+  box.animate({
+    left:'10px'
+  })
+});
+$('#up').click(function(){
+  box.animate({
+    top:'50px'
+  })
+});
+});
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
